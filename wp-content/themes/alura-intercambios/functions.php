@@ -21,5 +21,10 @@ function alura_registrando_post(){
 }
 add_action('init', 'alura_registrando_post');
 
-
+// Criando taxonomia (categoria)
+function alura_registrando_taxonomia(){
+    register_taxonomy('paises','destinos',
+    array('labels'=> array('name'=>'Países'),'hierarchical'=>true));
+}
+add_action('init', 'alura_registrando_taxonomia');
 ?>
