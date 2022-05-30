@@ -15,4 +15,11 @@ function alura_adcionando_recursos(){
 add_action('after_setup_theme', 'alura_adcionando_recursos');
 
 
+// Criando post customizado 
+function alura_registrando_post(){
+    register_post_type('destinos',array('labels'=>array('name'=> 'Destinos'),'public'=>true,'menu_position'=> 0,'supports'=> array('title','editor','thumbnail'),'menu_icon'=>'dashicons-admin-site'));
+}
+add_action('init', 'alura_registrando_post');
+
+
 ?>
