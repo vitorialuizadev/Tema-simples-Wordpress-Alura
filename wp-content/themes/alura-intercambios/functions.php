@@ -66,6 +66,7 @@ function alura_salvando_dados_metabox($post_id){
 
 add_action('save_post', 'alura_salvando_dados_metabox'); // Salva os post do wordpress
 
+//Pegando texto dinâmicos 
 function pegandoTextosBanner(){
     $args = array(
         'post_type'=>'banners',
